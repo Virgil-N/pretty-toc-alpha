@@ -208,9 +208,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   : "")
                 }</style><summary data-satteri-toc-title="${opt.languageMap?.[opt.locale ?? "en-US"] ?? defaultTitle}" class="${opt.class?.summary ?? ""}" style="${opt.style?.summary ?? ""}">${opt.languageMap?.[opt.locale ?? "en-US"] ?? defaultTitle}</summary><ul class="${opt.class?.ul ?? ""}" style="${opt.style?.ul ?? ""}">${nodeStr}</ul>${iframeContent}</details>`;
             } else {
-              const indexA = ctx.data.nodeStr?.lastIndexOf(
-                `<span data-depth='${depth}' style="display: none;"></span>`,
-              );
+              const indexA = ctx.data.nodeStr?.lastIndexOf(tagSignal);
               if (indexA !== -1) {
                 ctx.data.nodeStr =
                   ctx.data.nodeStr?.slice(0, indexA + tagSignalLength + 5) +
