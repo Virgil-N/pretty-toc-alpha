@@ -1,6 +1,6 @@
 {
   "name": "pretty-toc-alpha",
-  "version": "0.1.15",
+  "version": "0.1.17",
   "type": "module",
   "description": "A Table of Contents generation plugin for the Satteri markdown parser library. This package serves as a pre-release test for pretty-toc. Please install pretty-toc for the stable version.",
   "keywords": [
@@ -12,13 +12,13 @@
   ],
   "author": "Virgil",
   "license": "MIT",
-  "homepage": "https://github.com/Virgil-N/pretty-toc#readme",
+  "homepage": "https://github.com/Virgil-N/pretty-toc-alpha#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Virgil-N/pretty-toc.git"
+    "url": "git+https://github.com/Virgil-N/pretty-toc-alpha.git"
   },
   "bugs": {
-    "url": "https://github.com/Virgil-N/pretty-toc/issues"
+    "url": "https://github.com/Virgil-N/pretty-toc-alpha/issues"
   },
   "entry": [
     "./src/index.ts"

@@ -38,6 +38,6 @@ export interface Data {
   firstHeading: Readonly<Element>;
   firstHeadingDepth: number;
   firstHeadingId: string;
-  rootNode: Readonly<Parents> | undefined;
+  firstHeadingIndex: number;
   nodeStr: string;
 }
