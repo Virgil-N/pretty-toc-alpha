@@ -1,23 +1,76 @@
-# tsdown-starter
+A Table of Contents generation plugin for the Satteri markdown parser library. This package serves as a pre-release test for pretty-toc. Please install [pretty-toc](https://github.com/Virgil-N/pretty-toc) for the stable version.
 
-A starter for creating a TypeScript package.
+## Install
 
-## Development
-
-- Install dependencies:
-
-```bash
-npm install
+```
+npm install pretty-toc-alpha --save-dev
 ```
 
-- Run the unit tests:
+## Example
 
-```bash
-npm run test
+```javascript
+import prettyToc from 'pretty-toc-alpha';
+
+satteri({
+  hastPlugins: [prettyToc({title: "Table of Contents", listStyle: "decimal"})]
+})
 ```
 
-- Build the library:
+## options
 
-```bash
-npm run build
+```javascript
+// config file
+processor: satteri({
+  features: {
+    directive: true,
+    math: true,
+  },
+  hastPlugins: [
+    prettyToc({
+      title: "Table of Contents",
+      listStyle: "image", // disc, circle, decimal, none... icon, image...
+      icon: ["🐶", "🦁", "🐷", "🐸", "🐥", "🐞"], // or just a string, eg. "🐥"
+      image: [
+        "/svg/unjs--automd.svg",
+        "/svg/unjs--hookable.svg",
+        "/svg/unjs--knitwork.svg",
+        "/svg/unjs--mongoz.svg",
+        "/svg/unjs--ofetch.svg",
+        "/svg/unjs--uncrypto.svg",
+      ], // or just a string, eg. "/svg/unjs--automd.svg"
+      markerCssSize: "1rem",
+      lightThemeHighlightColor: "oklch(0.75 0.1229 12.71)",
+      darkThemeHighlightColor: "oklch(0.81 0.1004 305.04)",
+      class: {
+        summary: "",
+        ul: "",
+        li: "",
+        a: "",
+      },
+      globalStyle: "",
+      style: {
+        summary: "",
+        ul: "",
+        li: "",
+        a: "",
+      },
+      locale: "zh-CN", // Note: The case of the locale variable should match the locale in your page URL.
+      languageMap: {
+        "de-DE": "Inhaltsverzeichnis",
+        "el-GR": "Περιεχόμενα",
+        "en-US": "Table of Contents",
+        "es-ES": "Índice",
+        "fr-FR": "Sommaire",
+        "it-IT": "Indice",
+        "ja-JP": "目次",
+        "ko-KR": "목차",
+        "ru-RU": "Оглавление",
+        "th-TH": "สารบัญ",
+        "tr-TR": "İçindekiler",
+        "zh-CN": "目录",
+        "zh-Hant": "目錄",
+      },
+    }),
+  ],
+}),
 ```

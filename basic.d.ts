@@ -1,4 +1,4 @@
-import type { Element, Parents } from "hast";
+import type { Element } from "hast";
 
 export interface tagHasProperty {
   summary?: string;
