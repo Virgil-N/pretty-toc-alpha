@@ -1,6 +1,6 @@
 {
   "name": "pretty-toc-alpha",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "type": "module",
   "description": "A Table of Contents generation plugin for the Satteri markdown parser library. This package serves as a pre-release test for pretty-toc. Please install pretty-toc for the stable version.",
   "keywords": [
