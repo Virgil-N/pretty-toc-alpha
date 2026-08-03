@@ -1,0 +1,56 @@
+{
+  "name": "pretty-toc-alpha",
+  "version": "0.1.15",
+  "type": "module",
+  "description": "A Table of Contents generation plugin for the Satteri markdown parser library. This package serves as a pre-release test for pretty-toc. Please install pretty-toc for the stable version.",
+  "keywords": [
+    "Table of Contents",
+    "TOC",
+    "satteri",
+    "markdown",
+    "plugin"
+  ],
+  "author": "Virgil",
+  "license": "MIT",
+  "homepage": "https://github.com/Virgil-N/pretty-toc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Virgil-N/pretty-toc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Virgil-N/pretty-toc/issues"
+  },
+  "entry": [
+    "./src/index.ts"
+  ],
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.mts",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "@types/slug": "^5.0.9",
+    "satteri": "^0.9.5",
+    "slug": "^12.0.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-url": "^8.0.2",
+    "@types/hast": "^3.0.4",
+    "@types/node": "^26.1.1",
+    "bumpp": "^11.1.0",
+    "tsdown": "^0.22.5",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.10"
+  }
+}
