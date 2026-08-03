@@ -157,7 +157,6 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                         <strong>Hello from iframe!</strong>
                         <script is:inline data-astro-rerun>
                           console.log('🚀 pretty-toc running...');
-                          // 这里可以放任何你想要的初始化代码
                           const currentLocale = window.parent.location.pathname.split('/')[1] || '${opt.locale || DEFALUT_LOCALE}';
                           const languageMap = ${JSON.stringify(opt.languageMap).replaceAll('"', "'")};
 
@@ -182,9 +181,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                           });
                         </script>
                       &lt;/body&gt;
-                      &lt;/html&gt;"
-              sandbox="allow-scripts allow-same-origin"
-              style="width:100%;height:200px;border:none;">
+                      &lt;/html&gt;">
             </iframe>`;
 
               ctx.data.firstHeading = node;
