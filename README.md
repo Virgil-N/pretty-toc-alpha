@@ -23,6 +23,7 @@ processor: satteri({
       title: "Table of Contents",
       openedMarker: '🦋',
 			closedMarker: '🐢',
+			titleMarkerType: 'icon',
 			titleMarkerCssSize: '1.5rem',
       listStyle: "image", // disc, circle, decimal, none... icon, image...
       icon: ["🐶", "🦁", "🐷", "🐸", "🐥", "🐞"], // or just a string, eg. "🐥"
@@ -80,13 +81,13 @@ processor: satteri({
 |Property‌|Type|Default Value|Preset Value|Info|
 |:---|:---|:---|:---|:--|
 |title|string|Table of Contents|Table of Contents|-|
-|openedMarker|string or undefined|undefined|▼|-|
-|closedMarker|string or undefined|undefined|▶︎|-|
-|titleMarkerType|string or undefined|undefined|icon|-|
+|openedMarker|string or undefined|undefined|▼|titleMarkerType must already be set.|
+|closedMarker|string or undefined|undefined|▶︎|titleMarkerType must already be set.|
+|titleMarkerType|string or undefined|undefined|icon|Value can only be "icon" or "image".|
 |titleMarkerCssSize|string or undefined|undefined|fit-content|-|
 |listStyle|string or undefined|undefined|decimal|eg. disc, circle, decimal, none... or icon and image|
-|icon|string or string[] or undefined|undefined|decimal|-|
-|image|string or string[] or undefined|undefined|404 image|-|
+|icon|string or string[] or undefined|undefined|decimal|listStyle must already be set.|
+|image|string or string[] or undefined|undefined|404 image|listStyle must already be set.|
 |liMarkerCssSize|string or undefined|undefined|1.5rem|CSS property value|
 |lightThemeHighlightColor|string or undefined|undefined|oklch(0.75 0.1229 12.71)|-|
 |darkThemeHighlightColor|string or undefined|undefined|oklch(0.81 0.1004 305.04)|-|

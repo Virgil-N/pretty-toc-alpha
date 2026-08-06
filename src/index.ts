@@ -34,7 +34,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
             let title = opt.title || DEFAULT_TITLE
 
             if (opt.languageMap) {
-              title = opt.languageMap[opt.locale ?? DEFALUT_LOCALE];
+              title = opt.languageMap[opt.locale ?? DEFALUT_LOCALE] || DEFAULT_TITLE;
             } else {
               title = DEFAULT_LANGUAGE_MAP[opt.locale ?? DEFALUT_LOCALE] || DEFAULT_TITLE;
             }
@@ -123,10 +123,11 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   grid-template-rows: 1fr;
                 }
                 .toc-title {
-                  font-size: 1.4rem;
+                  font-size: 1.2rem;
                   font-weight: 600;
                   margin: 0 0 0.5rem 0;
                   width: fit-content;
+                  position: relative;
                 }
                 .toc-title:hover {
                   color: ${lightThemeHighlightColor};
@@ -225,7 +226,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                         if (tocSummary) {
                           const titleKey = tocSummary.getAttribute('data-satteri-toc-title');
                           const translation =
-                            languageMap[locale] || ${title} || titleKey;
+                            languageMap[locale] || '${title}' || titleKey;
                           tocSummary.textContent = translation;
                         }
                       }
@@ -279,48 +280,45 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                       max-height: 100vh;
                     }
                     ` : "") +
-                (opt.titleMarkerType === "icon" &&
+                (opt.titleMarkerType === "icon" ?
                   `
                     .toc-title::before {
-                      content: '${closedMarker}';
-                      width: ${titleMarkerCssSize};
-                      height: ${titleMarkerCssSize};
-                      margin-right: 0.5rem;
-                      display: inline-grid;
-                      justify-content: center;
-                      align-items: center;
+                      content: '${closedMarker} ';
+                      display: contents;
+                      font-size: 1rem;
                     }
                     .toc-title.open::before {
-                      content: '${openedMarker}';
-                      width: ${titleMarkerCssSize};
-                      height: ${titleMarkerCssSize};
-                      margin-right: 0.5rem;
-                      display: inline-grid;
-                      justify-content: center;
-                      align-items: center;
+                      content: '${openedMarker} ';
+                      display: contents;
+                      font-size: 1rem;
                     }
-                  `) +
-                (opt.titleMarkerType === "image" &&
+                  ` : "") +
+                (opt.titleMarkerType === "image" ?
                   `
+                    .toc-wrapper > .toc-title, .toc-wrapper > ul {
+                      margin-left: 2rem;
+                    }
                     .toc-title::before {
-                      content: url('${closedMarker}');
+                      content: "";
+                      background: url('${closedMarker}') center / contain no-repeat;
                       width: ${titleMarkerCssSize};
                       height: ${titleMarkerCssSize};
-                      margin-right: 0.5rem;
-                      display: inline-grid;
-                      justify-content: center;
-                      align-items: center;
+                      position: absolute;
+                      left: -2rem;
+                      top: 50%;
+                      transform: translateY(-50%);
                     }
                     .toc-title.open::before {
-                      content: url('${openedMarker}');
+                      content: "";
+                      background: url('${openedMarker}') center / contain no-repeat;
                       width: ${titleMarkerCssSize};
                       height: ${titleMarkerCssSize};
-                      margin-right: 0.5rem;
-                      display: inline-grid;
-                      justify-content: center;
-                      align-items: center;
+                      position: absolute;
+                      left: -2rem;
+                      top: 50%;
+                      transform: translateY(-50%);
                     }
-                  `)
+                  ` : "")
                 }</style><h2 data-satteri-toc-title="${title}" class="toc-title ${opt.class?.title ?? ""}" style="${opt.style?.title ?? ""}">${title}</h2><ul class="${opt.class?.ul ?? ""}" style="${opt.style?.ul ?? ""}">${nodeStr}</ul>${iframeContent}</div>`;
             } else {
               const indexA = ctx.data.nodeStr?.lastIndexOf(tagSignal);

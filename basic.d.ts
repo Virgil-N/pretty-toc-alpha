@@ -14,7 +14,7 @@ export interface HastOption {
   openedMarker?: string;
   /** 关闭时的标记 */
   closedMarker?: string;
-  /** 标题标记类型 */
+  /** 标题标记类型 "icon" | "image" */
   titleMarkerType?: string;
   /** TOC标题标记大小 */
   titleMarkerCssSize?: string;
