@@ -12,11 +12,6 @@
   ],
   "author": "Virgil",
   "license": "MIT",
-  "release": {
-    "branches": [
-      "main"
-    ]
-  },
   "homepage": "https://github.com/Virgil-N/pretty-toc-alpha#readme",
   "repository": {
     "type": "git",
