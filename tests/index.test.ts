@@ -1,6 +1,6 @@
-// import { expect, test } from 'vitest'
-// import { fn } from '../src'
+import { expectTypeOf, test } from 'vitest'
+import prettyToc from '../src/index'
 
-// test('fn', () => {
-//   expect(fn()).toBe('Hello, tsdown!')
-// })
+test('prettyToc', () => {
+  expectTypeOf(prettyToc).toBeFunction()
+})
