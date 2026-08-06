@@ -22,9 +22,9 @@ processor: satteri({
     prettyToc({
       title: "Table of Contents",
       openedMarker: '🦋',
-			closedMarker: '🐢',
-			titleMarkerType: 'icon',
-			titleMarkerCssSize: '1.5rem',
+      closedMarker: '🐢',
+      titleMarkerType: 'icon',
+      titleMarkerCssSize: '1.5rem',
       listStyle: "image", // disc, circle, decimal, none... icon, image...
       icon: ["🐶", "🦁", "🐷", "🐸", "🐥", "🐞"], // or just a string, eg. "🐥"
       image: [
@@ -39,9 +39,9 @@ processor: satteri({
       lightThemeHighlightColor: "oklch(0.75 0.1229 12.71)",
       darkThemeHighlightColor: "oklch(0.81 0.1004 305.04)",
       animation: {
-				duration: '0.8s',
-				timingFunction: 'ease-in-out'
-			},
+        duration: '0.8s',
+        timingFunction: 'ease-in-out'
+      },
       class: {
         summary: "",
         ul: "",
