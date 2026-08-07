@@ -240,7 +240,6 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                     &lt;html&gt;
                     &lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;/head&gt;
                     &lt;body&gt;
-                      <strong>Hello from iframe!</strong>
                       <script is:inline data-astro-rerun>
                         const currentLocale = window.parent.location.pathname.split('/')[1] || '${opt.locale || DEFALUT_LOCALE}';
                         const languageMap = ${JSON.stringify(opt.languageMap).replaceAll('"', "'")} || ${JSON.stringify(DEFAULT_LANGUAGE_MAP).replaceAll('"', "'")};
@@ -268,17 +267,13 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                           }
                         }
 
-                        console.log('outer');
                         window.addEventListener('load', function() {
-                          console.log('load', window.parent.document.readyState);
                           if (window.parent.document.readyState === 'complete') {
-                            console.log('parent already load');
                             syncTocTitle(currentLocale, languageMap);
                             toggleToc();
                           } else {
                             window.parent.document.addEventListener('readystatechange', event => {
                               if (event.target.readyState === 'complete') {
-                                console.log('parent now load');
                                 syncTocTitle(currentLocale, languageMap);
                                 toggleToc();
                               }
