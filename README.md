@@ -30,20 +30,19 @@ deno add -D pretty-toc
 ## Screenshots
 
 - icon
-![](https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
-<img alt="icon" src="https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png" />
+![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/with-icon.png)
 
 - image
-![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-image.png)
+![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/with-image.png)
 
 - dot
-![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
+![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-dot.png)
 
 - decimal
-![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
+![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-decimal.png)
 
 - nested image
-![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
+![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-multiple-image.png)
 
 ## Example
 
