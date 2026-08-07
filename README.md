@@ -21,6 +21,29 @@ bun add -D pretty-toc
 deno add -D pretty-toc
 ```
 
+## Table of Contents
+
+- [Screenshots](#Screenshots)
+- [Example](#Example)
+- [Options](#Options)
+
+## Screenshots
+
+- icon
+![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+
+- image
+![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-image.png)
+
+- dot
+![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+
+- decimal
+![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+
+- nested image
+![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+
 ## Example
 
 ```javascript
@@ -91,7 +114,7 @@ processor: satteri({
 }),
 ```
 
-## options
+## Options
 
 |Property‌|Type|Default Value|Preset Value|Info|
 |:---|:---|:---|:---|:--|
