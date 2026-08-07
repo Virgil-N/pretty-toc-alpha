@@ -99,7 +99,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
             const tagSignal = `<span data-depth='${depth}' style="display: none;"></span>`;
             const tagSignalLength = tagSignal.length;
 
-            const nodeStr = `<li id="li-${contentSlug}" class="${opt.class?.li ?? ""}" style="${opt.style?.li ?? ""}" data-depth=${depth}><div class="li-row">${marker}<a href="#${contentSlug}" class="${opt.class?.a ?? ""}" style="${opt.style?.a ?? ""}">${content}</a></div>${tagSignal}</li>`;
+            let nodeStr = `<li id="li-${contentSlug}" class="${opt.class?.li ?? ""}" style="${opt.style?.li ?? ""}" data-depth=${depth}><div class="li-row">${marker}<a href="#${contentSlug}" class="${opt.class?.a ?? ""}" style="${opt.style?.a ?? ""}">${content}</a></div>${tagSignal}</li>`;
 
             ctx.setProperty(node, "id", contentSlug);
 
@@ -118,6 +118,7 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   display: grid;
                   grid-template-rows: 0fr;
                   overflow: hidden;
+                  margin-bottom: 2rem;
                 }
                 .toc-wrapper:has(.toc-title.open) {
                   grid-template-rows: 1fr;
@@ -133,9 +134,6 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   padding-left: 0;
                   list-style-type: ${listStyle} ;
                   list-style-position: inside;
-                }
-                .toc-wrapper > ul {
-                  margin-left: 0.5rem;
                 }
                 @keyframes fadeIn {
                   from { opacity: 0; }
@@ -291,6 +289,12 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
               ctx.data.firstHeadingId = contentSlug;
               ctx.data.firstHeadingIndex = ctx.indexOf(node) ?? 0;
 
+              for (let i = depth; i > 1; i--) {
+                const prevContentSlug = String(new Date().getTime());
+                const prevTagsignal = `<span data-depth='${i - 1}' style="display: none;"></span>`;
+                nodeStr = `<li id="li-${prevContentSlug}" class="${opt.class?.li ?? ""}" style="${opt.style?.li ?? ""}" data-depth=${i - 1}><ul class="${opt.class?.ul ?? ""}" style="${opt.style?.ul ?? ""}">${nodeStr}</ul>${prevTagsignal}</li>`;
+              }
+
               ctx.data.nodeStr = `
                 <div class="toc-wrapper"><style>${baseStyle +
                 (opt.globalStyle ?? "") +
@@ -366,21 +370,19 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
               } else {
                 if (depth > 1) {
                   let indexB = -1;
-                  for (let i = depth; i > 0; i--) {
-                    indexB = ctx.data.nodeStr?.lastIndexOf(
-                      `<span data-depth='${i}' style="display: none;"></span>`,
-                    );
-                    if (indexB !== -1) {
+                  for (let i = depth; i > 1; i--) {
+                    indexB = ctx.data.nodeStr?.lastIndexOf(`<span data-depth='${i}' style="display: none;"></span>`);
+                    if (indexB === -1) {
+                      const prevContentSlug = String(new Date().getTime());
+                      const prevTagsignal = `<span data-depth='${i - 1}' style="display: none;"></span>`;
+
+                      nodeStr = `<li id="li-${prevContentSlug}" class="${opt.class?.li ?? ""}" style="${opt.style?.li ?? ""}" data-depth=${i - 1}><ul class="${opt.class?.ul ?? ""}" style="${opt.style?.ul ?? ""}">${nodeStr}</ul>${prevTagsignal}</li>`;
+                    } else {
                       break;
                     }
                   }
                   if (indexB !== -1) {
-                    ctx.data.nodeStr =
-                      ctx.data.nodeStr?.slice(0, indexB) +
-                      `<ul class="${opt.class?.ul ?? ""}" style="${opt.style?.ul ?? ""}">` +
-                      nodeStr +
-                      `</ul>` +
-                      ctx.data.nodeStr?.slice(indexB);
+                    ctx.data.nodeStr = ctx.data.nodeStr?.slice(0, indexB + tagSignalLength + 5) + nodeStr + ctx.data.nodeStr?.slice(indexB + tagSignalLength + 5);
                   } else {
                     const indexC = ctx.data.nodeStr?.lastIndexOf(`</ul>`);
                     if (indexC !== -1) {
