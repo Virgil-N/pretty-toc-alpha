@@ -24,7 +24,7 @@ processor: satteri({
       openedMarker: '🦋',
       closedMarker: '🐢',
       titleMarkerType: 'icon',
-      titleMarkerCssSize: '1.5rem',
+      titleMarkerCssSize: '1rem',
       listStyle: "image", // disc, circle, decimal, none... icon, image...
       icon: ["🐶", "🦁", "🐷", "🐸", "🐥", "🐞"], // or just a string, eg. "🐥"
       image: [
@@ -88,7 +88,7 @@ processor: satteri({
 |listStyle|string or undefined|undefined|decimal|eg. disc, circle, decimal, none... or icon and image|
 |icon|string or string[] or undefined|undefined|decimal|listStyle must already be set.|
 |image|string or string[] or undefined|undefined|404 image|listStyle must already be set.|
-|liMarkerCssSize|string or undefined|undefined|1.5rem|CSS property value|
+|liMarkerCssSize|string or undefined|undefined|1rem|CSS property value|
 |lightThemeHighlightColor|string or undefined|undefined|oklch(0.75 0.1229 12.71)|-|
 |darkThemeHighlightColor|string or undefined|undefined|oklch(0.81 0.1004 305.04)|-|
 |animation|boolean or { duration: string, timingFunction: string } or undefined|undefined|{ duration: "0.8s", timingFunction: 'ease-in-out' }|-|
