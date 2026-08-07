@@ -30,19 +30,19 @@ deno add -D pretty-toc
 ## Screenshots
 
 - icon
-![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
 
 - image
-![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-image.png)
+![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-image.png)
 
 - dot
-![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
 
 - decimal
-![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
 
 - nested image
-![](https://rebun.infini-cloud.net/v2/dav/pretty-toc(and-alpha)/with-icon.png)
+![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
 
 ## Example
 
