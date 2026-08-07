@@ -268,12 +268,22 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                           }
                         }
 
-                        syncTocTitle(currentLocale, languageMap);
-                        toggleToc();
-
-                        window.parent.addEventListener('load', function() {
-                          syncTocTitle(currentLocale, languageMap);
-                          toggleToc();
+                        console.log('outer');
+                        window.addEventListener('load', function() {
+                          console.log('load', window.parent.document.readyState);
+                          if (window.parent.document.readyState === 'complete') {
+                            console.log('parent already load');
+                            syncTocTitle(currentLocale, languageMap);
+                            toggleToc();
+                          } else {
+                            window.parent.document.addEventListener('readystatechange', event => {
+                              if (event.target.readyState === 'complete') {
+                                console.log('parent now load');
+                                syncTocTitle(currentLocale, languageMap);
+                                toggleToc();
+                              }
+                            });
+                          }
                         });
                       </script>
                     &lt;/body&gt;
