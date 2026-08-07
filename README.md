@@ -1,5 +1,4 @@
 [![CodeQL Advanced](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/codeql.yml/badge.svg)](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/codeql.yml)
-
 [![Verify and Release](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/verify-and-release.yml/badge.svg)](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/verify-and-release.yml)
 
 A Table of Contents generation plugin for the Satteri markdown parser library.
