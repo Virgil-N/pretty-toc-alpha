@@ -129,13 +129,6 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   width: fit-content;
                   position: relative;
                 }
-                .toc-title:hover {
-                  color: ${lightThemeHighlightColor};
-                  cursor: pointer;
-                }
-                html.dark .toc-title:hover {
-                  color: ${darkThemeHighlightColor};
-                }
                 ul {
                   padding-left: 0;
                   list-style-type: ${listStyle} ;
@@ -187,6 +180,13 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   text-decoration: none;
                 }
                 @media (hover: hover) {
+                  .toc-title:hover {
+                    color: ${lightThemeHighlightColor};
+                    cursor: pointer;
+                  }
+                  html.dark .toc-title:hover {
+                    color: ${darkThemeHighlightColor};
+                  }
                   .li-row:hover {
                     color: ${lightThemeHighlightColor};
                   }
@@ -205,6 +205,13 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   html.dark .li-row:hover > a {
                     color: ${darkThemeHighlightColor};
                   }
+                }
+                .toc-title:active {
+                  color: ${lightThemeHighlightColor};
+                  cursor: pointer;
+                }
+                html.dark .toc-title:active {
+                  color: ${darkThemeHighlightColor};
                 }
                 .li-row:active {
                   color: ${lightThemeHighlightColor};
