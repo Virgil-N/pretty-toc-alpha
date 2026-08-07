@@ -1,6 +1,7 @@
 A Table of Contents generation plugin for the Satteri markdown parser library.
 
-> [!WARNING] This package serves as a pre-release test for pretty-toc. Please install [pretty-toc](https://github.com/Virgil-N/pretty-toc) for the stable version.
+> [!WARNING]
+> This package serves as a pre-release test for pretty-toc. Please install [pretty-toc](https://github.com/Virgil-N/pretty-toc) for the stable version.
 
 ## Install
 
