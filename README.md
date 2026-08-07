@@ -30,7 +30,8 @@ deno add -D pretty-toc
 ## Screenshots
 
 - icon
-![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
+![](https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png)
+<img alt="icon" src="https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-icon.png" />
 
 - image
 ![](https://rebun.infini-cloud.net/browser/#https://rebun.infini%2Dcloud.net/v2/dav/pretty%2Dtoc%28and%2Dalpha%29/with-image.png)
