@@ -30,19 +30,19 @@ deno add -D pretty-toc
 ## Screenshots
 
 - icon
-![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/with-icon.png)
+![](https://github.com/Virgil-N/resource/blob/main/image/pretty-toc/with-icon.png)
 
 - image
-![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/with-image.png)
+![](https://github.com/Virgil-N/resource/blob/main/image/pretty-toc/with-image.png)
 
 - dot
-![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-dot.png)
+![](https://github.com/Virgil-N/resource/blob/main/image/pretty-toc/use-dot.png)
 
 - decimal
-![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-decimal.png)
+![](https://github.com/Virgil-N/resource/blob/main/image/pretty-toc/use-decimal.png)
 
 - nested image
-![](https://github.com/Virgil-N/resource/tree/main/image/pretty-toc/use-multiple-image.png)
+![](https://github.com/Virgil-N/resource/blob/main/image/pretty-toc/use-multiple-image.png)
 
 ## Example
 
