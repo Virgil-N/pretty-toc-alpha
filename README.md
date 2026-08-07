@@ -11,12 +11,16 @@ A Table of Contents generation plugin for the Satteri markdown parser library.
 ```
 // install with npm
 npm install pretty-toc --save-dev
+
 // install with pnpm
 pnpm install pretty-toc --save-dev
+
 // install with yarn
 yarn add -D pretty-toc
+
 // install with bun
 bun add -D pretty-toc
+
 // install with deno
 deno add -D pretty-toc
 ```

@@ -186,22 +186,42 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                 .li-row > a {
                   text-decoration: none;
                 }
-                .li-row:hover {
+                @media (hover: hover) {
+                  .li-row:hover {
+                    color: ${lightThemeHighlightColor};
+                  }
+                  .li-row:hover > .li-marker::before {
+                    color: ${lightThemeHighlightColor};
+                  }
+                  .li-row:hover > a {
+                    color: ${lightThemeHighlightColor};
+                  }
+                  html.dark .li-row:hover {
+                    color: ${darkThemeHighlightColor};
+                  }
+                  html.dark .li-row:hover > .li-marker::before {
+                    color: ${darkThemeHighlightColor};
+                  }
+                  html.dark .li-row:hover > a {
+                    color: ${darkThemeHighlightColor};
+                  }
+                }
+                .li-row:active {
                   color: ${lightThemeHighlightColor};
                 }
-                .li-row:hover > .li-marker::before {
+                .li-row:active > .li-marker::before {
                   color: ${lightThemeHighlightColor};
                 }
-                .li-row:hover > a {
+                .li-row:active > a {
                   color: ${lightThemeHighlightColor};
                 }
-                html.dark .li-row:hover {
+                html.dark .li-row:active {
                   color: ${darkThemeHighlightColor};
                 }
-                html.dark .li-row:hover > .li-marker::before {
+                html.dark .li-row:active > .li-marker::before {
                   color: ${darkThemeHighlightColor};
                 }
-                html.dark .li-row:hover > a {
+                html.dark .li-row:active > a {
                   color: ${darkThemeHighlightColor};
                 }
               `;
