@@ -164,7 +164,6 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
             // 替换toc
             if (parent.type === "root") {
               const collectedNodeStr = concatNodeStr(ctx.data.nodeTree.rootNode, opt);
-
               const baseStyle = `
                 .toc-wrapper {
                   display: grid;
@@ -186,6 +185,9 @@ function prettyToc(option?: HastOption): HastPluginDefinition {
                   padding-left: var(--list-indent, 1.5rem);
                   list-style-type: ${listStyle} ;
                   list-style-position: inside;
+                }
+                ul:not(:has(> li)) {
+                  padding-left: 0;
                 }
                 @keyframes fadeIn {
                   from { opacity: 0; }
