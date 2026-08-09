@@ -85,12 +85,14 @@ processor: satteri({
         timingFunction: 'ease-in-out'
       },
       class: {
+        title: "",
         ul: "",
         li: "",
         a: "",
       },
       globalStyle: "",
       style: {
+        title: "",
         ul: "",
         li: "",
         a: "",
@@ -132,8 +134,8 @@ processor: satteri({
 |lightThemeHighlightColor|string or undefined|undefined|oklch(0.75 0.1229 12.71)|-|
 |darkThemeHighlightColor|string or undefined|undefined|oklch(0.81 0.1004 305.04)|-|
 |animation|boolean or { duration: string, timingFunction: string } or undefined|undefined|{ duration: "0.8s", timingFunction: 'ease-in-out' }|-|
-|class|{ul?: string, li?: string, a?: string} or or undefined|undefined|undefined|eg. {li: "py-1"}|
+|class|{title?: string, ul?: string, li?: string, a?: string} or or undefined|undefined|undefined|eg. {li: "py-1"}|
 |globalStyle|string or or undefined|undefined|undefined|eg. "ul {background-color: yellow;}"|
-|style|Object{ul?: string, li?: string, a?: string} or or undefined|undefined|undefined|eg. {a: "font-style: italic;"}|
+|style|Object{title?: string, ul?: string, li?: string, a?: string} or or undefined|undefined|undefined|eg. {a: "font-style: italic;"}|
 |locale|string or undefined|undefined|en-US|eg. "zh-CN" // **Note: The case of the locale variable should match the locale in your page URL.**|
 |languageMap|Record<string, string> or undefined|undefined|{"de-DE": "Inhaltsverzeichnis","el-GR": "Περιεχόμενα","en-US": "Contents","es-ES": "Índice","fr-FR": "Sommaire","it-IT": "Indice","ja-JP": "目次","ko-KR": "목차","ru-RU": "Оглавление","th-TH": "สารบัญ","tr-TR": "İçindekiler","zh-CN": "目录","zh-Hant": "目錄"}|eg. {"en-US": "Table of Contents", "ja-JP": "目次"}|
