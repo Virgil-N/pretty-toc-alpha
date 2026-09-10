@@ -4,25 +4,25 @@
 A Table of Contents generation plugin for the Satteri markdown parser library.
 
 > [!WARNING]
-> This package serves as a pre-release test for pretty-toc. Please install [pretty-toc](https://github.com/Virgil-N/pretty-toc) for the stable version.
+> ***This package serves as a pre-release test for [pretty-toc](https://www.npmjs.com/package/pretty-toc). Please install [pretty-toc](https://www.npmjs.com/package/pretty-toc) for the stable version.***
 
 ## Install
 
 ```
 // install with npm
-npm install pretty-toc --save-dev
+npm install pretty-toc-alpha --save-dev
 
 // install with pnpm
-pnpm install pretty-toc --save-dev
+pnpm install pretty-toc-alpha --save-dev
 
 // install with yarn
-yarn add -D pretty-toc
+yarn add -D pretty-toc-alpha
 
 // install with bun
-bun add -D pretty-toc
+bun add -D pretty-toc-alpha
 
 // install with deno
-deno add -D pretty-toc
+deno add -D pretty-toc-alpha
 ```
 
 ## Table of Contents
@@ -51,7 +51,7 @@ deno add -D pretty-toc
 ## Example
 
 ```javascript
-import prettyToc from 'pretty-toc';
+import prettyToc from 'pretty-toc-alpha';
 
 // example
 satteri({
