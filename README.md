@@ -53,7 +53,7 @@ deno add -D pretty-toc-alpha
 ```javascript
 import prettyToc from 'pretty-toc-alpha';
 
-// example
+// Basic example
 satteri({
   hastPlugins: [prettyToc({title: "Table of Contents", listStyle: "decimal"})]
 })
