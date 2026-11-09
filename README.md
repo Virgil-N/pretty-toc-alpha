@@ -33,6 +33,7 @@ deno add -D pretty-toc-alpha
 ## Table of Contents
 
 - [Example](#Example)
+- [Screenshots](#Screenshots)
 - [Options](#Options)
 - [Contribution](#Contribution)
 
@@ -106,7 +107,7 @@ satteri({
 }),
 ```
 
-<details>
+<details id="Screenshots">
   <summary>Screenshots</summary>
   <ol>
     <li>
