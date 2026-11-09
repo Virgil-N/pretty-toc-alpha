@@ -1,5 +1,4 @@
 [![CodeQL Advanced](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/codeql.yml/badge.svg)](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/codeql.yml)
-[![GitHub Advanced Security](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/agents/github-advanced-security/badge.svg)](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/agents/github-advanced-security)
 [![Verify and Release](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/verify-and-release.yml/badge.svg)](https://github.com/Virgil-N/pretty-toc-alpha/actions/workflows/verify-and-release.yml)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Virgil-N/pretty-toc-alpha)
 ![NPM Downloads](https://img.shields.io/npm/dm/pretty-toc-alpha)
