@@ -112,7 +112,7 @@ satteri({
 ## Screenshots
 
 <details>
-  <summary>点击展开</summary>
+  <summary>Click to open</summary>
   <ol>
     <li>
       <p>icon</p>
